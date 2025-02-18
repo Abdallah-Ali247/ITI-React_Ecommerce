@@ -8,6 +8,13 @@
       "role": "user"
     },
     {
+      "id": "111",
+      "name": "admin",
+      "email": "admin@admin.com",
+      "password": "123",
+      "role": "admin"
+    },
+    {
       "id": "2",
       "name": "Jane Smith",
       "email": "jane@example.com",
@@ -18,35 +25,18 @@
       "id": "e1c1",
       "email": "test@test.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "name": "test"
     },
     {
       "id": "6a20",
       "email": "abdo@gmail.com",
       "password": "123",
-      "role": "user"
+      "role": "seller"
     },
     {
       "id": "50e7",
       "email": "new@new.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "316e",
-      "email": "aa@aa.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "3cbc",
-      "email": "aa@aa.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "98ca",
-      "email": "a1@a1.com",
       "password": "123",
       "role": "user"
     },

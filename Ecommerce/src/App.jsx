@@ -7,6 +7,9 @@ import Products from "./components/Products";
 import Cart from "./components/Cart";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import OrdersPage from "./pages/OrdersPage";
+import AdminPanel from "./pages/AdminPanel";
+
+
 
 const App = () => {
   return (
@@ -23,6 +26,7 @@ const App = () => {
         </Route>
 
         <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </Router>
   );
