@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import OrdersPage from "./pages/OrdersPage";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         <Route element={<ProtectedRoute allowedRoles={["user", "seller", "admin"]} />}>
           <Route path="/cart" element={<Cart />} />
         </Route>
+
+        <Route path="/orders" element={<OrdersPage />} />
       </Routes>
     </Router>
   );
