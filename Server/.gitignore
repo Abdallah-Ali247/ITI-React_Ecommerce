@@ -91,6 +91,7 @@ public/
 # Thumbnails
 ._*
 
+package-lock.json
 # Temporary files
 *.swp
 *.swo

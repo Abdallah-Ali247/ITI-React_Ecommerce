@@ -100,6 +100,27 @@ export const addToCart = createAsyncThunk("cart/addToCart", async ({ product, us
   return fetch(`http://localhost:5000/cart?userId=${userId}`).then((res) => res.json());
 });
 
+// Update quantity in db.json
+export const updateCartQuantity = createAsyncThunk("cart/updateCartQuantity", async ({ itemId, newQuantity }) => {
+  if (newQuantity < 1) {
+    await fetch(`http://localhost:5000/cart/${itemId}`, { method: "DELETE" });
+  } else {
+    await fetch(`http://localhost:5000/cart/${itemId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ quantity: newQuantity }),
+    });
+  }
+
+  return fetch(`http://localhost:5000/cart`).then((res) => res.json());
+});
+
+// Remove item from cart
+export const removeCartItem = createAsyncThunk("cart/removeCartItem", async (itemId) => {
+  await fetch(`http://localhost:5000/cart/${itemId}`, { method: "DELETE" });
+  return fetch(`http://localhost:5000/cart`).then((res) => res.json());
+});
+
 const cartSlice = createSlice({
   name: "cart",
   initialState: { cartItems: [], loading: false },
@@ -111,8 +132,16 @@ const cartSlice = createSlice({
       })
       .addCase(addToCart.fulfilled, (state, action) => {
         state.cartItems = action.payload;
+      })
+      .addCase(updateCartQuantity.fulfilled, (state, action) => {
+        state.cartItems = action.payload;
+      })
+      .addCase(removeCartItem.fulfilled, (state, action) => {
+        state.cartItems = action.payload;
       });
   },
 });
 
 export default cartSlice.reducer;
+
+

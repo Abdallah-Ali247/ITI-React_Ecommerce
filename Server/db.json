@@ -55,6 +55,12 @@
       "email": "test2@test2.com",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "f2af",
+      "email": "test3@test3.com",
+      "password": "123",
+      "role": "user"
     }
   ],
   "products": [
@@ -76,20 +82,12 @@
   "orders": [],
   "cart": [
     {
-      "id": "72d6",
-      "userId": "5191",
+      "id": "2991",
+      "userId": "f2af",
       "productId": "1",
       "name": "Laptop",
       "price": 1000,
-      "quantity": 2
-    },
-    {
-      "id": "9eb3",
-      "userId": "5191",
-      "productId": "2",
-      "name": "T-Shirt",
-      "price": 20,
-      "quantity": 1
+      "quantity": 6
     }
   ]
 }
