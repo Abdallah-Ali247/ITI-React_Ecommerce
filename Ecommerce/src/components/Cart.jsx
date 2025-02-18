@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCart, updateCartQuantity, removeCartItem } from "../redux/slices/cartSlice";
+import { placeOrder } from "../redux/slices/orderSlice";
 
 
- 
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -11,13 +11,7 @@ const Cart = () => {
     const { user } = useSelector((state) => state.auth);
 
 
-    // const handleRemove = (id) => {
-    //     dispatch(removeFromCart(id));
-    // };
 
-    // const handleClearCart = () => {
-    //     dispatch(clearCart());
-    // };
 
     useEffect(() => {
         if (user) {
@@ -32,6 +26,13 @@ const Cart = () => {
     const handleRemove = (itemId) => {
         dispatch(removeCartItem(itemId));
     };
+
+
+
+    const handleCheckout = async () => {
+        await dispatch(placeOrder({ userId: user.id, cartItems }));
+        dispatch(fetchCart(user.id));  
+      };
 
 
 
@@ -61,6 +62,9 @@ const Cart = () => {
                 ))}
             </ul>
             <h3 className="mt-4">Total Price: ${totalPrice.toFixed(2)}</h3>
+            <button className="btn btn-primary mt-3" onClick={handleCheckout}>
+                Checkout
+            </button>
         </div>
     );
 
