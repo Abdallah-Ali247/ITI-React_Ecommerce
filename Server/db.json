@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "abcdef",
+      "role": "seller"
+    },
+    {
+      "id": "e1c1",
+      "email": "test@test.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "6a20",
+      "email": "abdo@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "50e7",
+      "email": "new@new.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "316e",
+      "email": "aa@aa.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "3cbc",
+      "email": "aa@aa.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "98ca",
+      "email": "a1@a1.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "5191",
+      "email": "test2@test2.com",
+      "password": "123",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": 1000,
+      "category": "Electronics",
+      "quantity": 10
+    },
+    {
+      "id": "2",
+      "name": "T-Shirt",
+      "price": 20,
+      "category": "Clothing",
+      "quantity": 15
+    }
+  ],
+  "orders": [],
+  "cart": [
+    {
+      "id": "72d6",
+      "userId": "5191",
+      "productId": "1",
+      "name": "Laptop",
+      "price": 1000,
+      "quantity": 2
+    },
+    {
+      "id": "9eb3",
+      "userId": "5191",
+      "productId": "2",
+      "name": "T-Shirt",
+      "price": 20,
+      "quantity": 1
+    }
+  ]
+}
