@@ -91,6 +91,20 @@
       "price": "20",
       "category": "cat1",
       "image": "/products/headphone.webp"
+    },
+    {
+      "id": "c94d",
+      "name": "",
+      "price": "",
+      "category": "",
+      "image": ""
+    },
+    {
+      "id": "8e12",
+      "name": "d",
+      "price": "",
+      "category": "d",
+      "image": "/products/clothes.jpg"
     }
   ],
   "orders": [

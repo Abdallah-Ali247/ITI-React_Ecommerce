@@ -140,6 +140,9 @@ const AdminProductManager = () => {
 export default AdminProductManager;
 
 
+/* *************************** */
+console.log('dd')
+
 
 
 
