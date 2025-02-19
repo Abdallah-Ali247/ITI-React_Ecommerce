@@ -32,13 +32,15 @@
       "id": "6a20",
       "email": "abdo@gmail.com",
       "password": "123",
-      "role": "seller"
+      "role": "seller",
+      "name": "abdo"
     },
     {
       "id": "50e7",
       "email": "new@new.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "name": "new"
     },
     {
       "id": "5191",
@@ -59,14 +61,36 @@
       "name": "Laptop",
       "price": 1000,
       "category": "Electronics",
-      "quantity": 10
+      "quantity": 10,
+      "image": "/products/Laptop.webp"
     },
     {
-      "id": "2",
-      "name": "T-Shirt",
-      "price": 20,
-      "category": "Clothing",
-      "quantity": 15
+      "id": "373d",
+      "name": "Watch",
+      "price": "1500",
+      "category": "Electronics",
+      "image": "/products/watch.jpg"
+    },
+    {
+      "id": "c5e1",
+      "name": "T-shirt",
+      "price": "50",
+      "category": "cloths",
+      "image": "/products/shirt.webp"
+    },
+    {
+      "id": "c827",
+      "name": "test",
+      "price": "400",
+      "category": "cat1",
+      "image": "/products/health.jpg"
+    },
+    {
+      "id": "ed92",
+      "name": "test",
+      "price": "20",
+      "category": "cat1",
+      "image": "/products/headphone.webp"
     }
   ],
   "orders": [

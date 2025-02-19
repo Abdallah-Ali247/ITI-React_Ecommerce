@@ -8,6 +8,7 @@ import Cart from "./components/Cart";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import OrdersPage from "./pages/OrdersPage";
 import AdminPanel from "./pages/AdminPanel";
+import AdminProductManager from "./pages/AdminProductManager";
 
 
 
@@ -27,6 +28,8 @@ const App = () => {
 
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/admin/products" element={<AdminProductManager />} />
+        
       </Routes>
     </Router>
   );
