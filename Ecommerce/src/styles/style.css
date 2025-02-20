@@ -1,0 +1,26 @@
+/* src/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text */
+  }
+  
+  .container {
+    max-width: 1200px; /* Limit container width */
+  }
+  
+  h1, h2, h3 {
+    color: #007bff; /* Bootstrap primary blue */
+  }
+  
+  button {
+    border-radius: 5px; /* Rounded buttons */
+  }
+  
+  .table {
+    border: 1px solid #ddd; /* Table borders */
+  }
+  
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+  }

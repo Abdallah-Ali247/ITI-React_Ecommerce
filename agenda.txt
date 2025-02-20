@@ -84,12 +84,24 @@ project/
 
 /* 
 
-user cant disply his orders after replace the code of OrdersPage.jsx
+finish all backend 
+1.User
+        view products 
+        add to cart
+        checkout
+        view orders only 
+        can't access adminUser , adminProducts
 
-seller can display orders that set "sellerId" manualy to the db order items
+2. Seller 
+        all user permisions 
+        view orders + opprove
+        access adminProducts
+        can't access adminUser
+
+3. Admin
+        all user & seller permisions
+        access adminUser
 
 
 
-
-
-
+/* **************  update design  ***************** */

@@ -9,11 +9,15 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import OrdersPage from "./pages/OrdersPage";
 import AdminPanel from "./pages/AdminPanel";
 import AdminProductManager from "./pages/AdminProductManager";
+import Navbar from "./components/Navbar";
+
 
 
 const App = () => {
   return (
     <Router>
+      <Navbar />
+
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

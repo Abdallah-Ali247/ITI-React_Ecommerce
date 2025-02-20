@@ -502,5 +502,15 @@
       "createdAt": "2025-02-20T10:15:40.925Z"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "31c0",
+      "userId": "111",
+      "productId": "1",
+      "name": "Laptop",
+      "price": 1000,
+      "image": "/products/Laptop.webp",
+      "quantity": 1
+    }
+  ]
 }
