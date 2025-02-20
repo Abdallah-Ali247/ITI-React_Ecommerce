@@ -2,9 +2,9 @@
   "users": [
     {
       "id": "1",
-      "name": "John Doe",
-      "email": "john@example.com",
-      "password": "123456",
+      "name": "customer",
+      "email": "customer@customer.com",
+      "password": "123",
       "role": "user"
     },
     {
@@ -16,9 +16,9 @@
     },
     {
       "id": "2",
-      "name": "Jane Smith",
-      "email": "jane@example.com",
-      "password": "abcdef",
+      "name": "ahmed ali",
+      "email": "seller@seller.com",
+      "password": "123",
       "role": "seller"
     },
     {
@@ -46,13 +46,15 @@
       "id": "5191",
       "email": "test2@test2.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "name": "test2"
     },
     {
       "id": "f2af",
       "email": "test3@test3.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "name": "test3"
     }
   ],
   "products": [
@@ -62,21 +64,24 @@
       "price": 1000,
       "category": "Electronics",
       "quantity": 10,
-      "image": "/products/Laptop.webp"
+      "image": "/products/Laptop.webp",
+      "sellerId": "2"
     },
     {
       "id": "373d",
       "name": "Watch",
       "price": "1500",
       "category": "Electronics",
-      "image": "/products/watch.jpg"
+      "image": "/products/watch.jpg",
+      "sellerId": "2"
     },
     {
       "id": "c5e1",
       "name": "T-shirt",
       "price": "50",
       "category": "cloths",
-      "image": "/products/shirt.webp"
+      "image": "/products/shirt.webp",
+      "sellerId": "2"
     },
     {
       "id": "c827",
@@ -94,17 +99,10 @@
     },
     {
       "id": "c94d",
-      "name": "",
-      "price": "",
-      "category": "",
-      "image": ""
-    },
-    {
-      "id": "8e12",
-      "name": "d",
-      "price": "",
-      "category": "d",
-      "image": "/products/clothes.jpg"
+      "name": "sa",
+      "price": "50",
+      "category": "20",
+      "image": "/products/cloths.jpg"
     }
   ],
   "orders": [
@@ -118,7 +116,8 @@
           "productId": "1",
           "name": "Laptop",
           "price": 1000,
-          "quantity": 6
+          "quantity": 6,
+          "sellerId": "2"
         }
       ],
       "status": "pending",
@@ -134,10 +133,11 @@
           "productId": "1",
           "name": "Laptop",
           "price": 1000,
-          "quantity": 6
+          "quantity": 6,
+          "sellerId": "2"
         }
       ],
-      "status": "pending",
+      "status": "approved",
       "createdAt": "2025-02-18T22:51:49.670Z"
     },
     {
@@ -150,10 +150,11 @@
           "productId": "1",
           "name": "Laptop",
           "price": 1000,
-          "quantity": 6
+          "quantity": 6,
+          "sellerId": "2"
         }
       ],
-      "status": "pending",
+      "status": "rejected",
       "createdAt": "2025-02-18T22:52:08.471Z"
     },
     {
@@ -177,7 +178,7 @@
           "quantity": 1
         }
       ],
-      "status": "pending",
+      "status": "approved",
       "createdAt": "2025-02-18T22:54:09.093Z"
     },
     {
@@ -203,6 +204,302 @@
       ],
       "status": "pending",
       "createdAt": "2025-02-18T22:58:36.421Z"
+    },
+    {
+      "id": "2a00",
+      "userId": "1",
+      "items": [
+        {
+          "id": "cd7b",
+          "userId": "1",
+          "productId": "1",
+          "name": "Laptop",
+          "price": 1000,
+          "image": "/products/Laptop.webp",
+          "quantity": 1
+        },
+        {
+          "id": "8518",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "f1fb",
+          "userId": "1",
+          "productId": "c5e1",
+          "name": "T-shirt",
+          "price": "50",
+          "image": "/products/shirt.webp",
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-19T18:10:47.711Z"
+    },
+    {
+      "id": "857b",
+      "userId": "1",
+      "items": [
+        {
+          "id": "40a3",
+          "userId": "1",
+          "productId": "ed92",
+          "name": "test",
+          "price": "20",
+          "image": "/products/headphone.webp",
+          "quantity": 5
+        },
+        {
+          "id": "0a7b",
+          "userId": "1",
+          "productId": "1",
+          "name": "Laptop",
+          "price": 1000,
+          "image": "/products/Laptop.webp",
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-19T18:13:42.622Z"
+    },
+    {
+      "id": "3372",
+      "userId": null,
+      "items": [
+        {
+          "id": "7a17",
+          "userId": "2506",
+          "productId": "1",
+          "name": "Laptop",
+          "price": 1000,
+          "image": "/products/Laptop.webp",
+          "quantity": 1
+        },
+        {
+          "id": "5392",
+          "userId": "2506",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "19d4",
+          "userId": "2506",
+          "productId": "c5e1",
+          "name": "T-shirt",
+          "price": "50",
+          "image": "/products/shirt.webp",
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-19T22:41:40.029Z"
+    },
+    {
+      "id": "d027",
+      "userId": "1",
+      "items": [
+        {
+          "id": "ad09",
+          "userId": "1",
+          "productId": "1",
+          "name": "Laptop",
+          "price": 1000,
+          "image": "/products/Laptop.webp",
+          "quantity": 1
+        },
+        {
+          "id": "40b4",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "7e68",
+          "userId": "1",
+          "productId": "c5e1",
+          "name": "T-shirt",
+          "price": "50",
+          "image": "/products/shirt.webp",
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-19T23:10:10.833Z"
+    },
+    {
+      "id": "eea0",
+      "userId": "1",
+      "items": [
+        {
+          "id": "7cb3",
+          "userId": "1",
+          "productId": "1",
+          "name": "Laptop",
+          "price": 1000,
+          "image": "/products/Laptop.webp",
+          "quantity": 1
+        },
+        {
+          "id": "f773",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "c452",
+          "userId": "1",
+          "productId": "c5e1",
+          "name": "T-shirt",
+          "price": "50",
+          "image": "/products/shirt.webp",
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-19T23:27:45.117Z"
+    },
+    {
+      "id": "51e3",
+      "userId": "1",
+      "items": [
+        {
+          "id": "2a4c",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 2,
+          "sellerId": null
+        },
+        {
+          "id": "7c50",
+          "userId": "1",
+          "productId": "c5e1",
+          "name": "T-shirt",
+          "price": "50",
+          "image": "/products/shirt.webp",
+          "quantity": 1,
+          "sellerId": null
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-19T23:36:50.120Z"
+    },
+    {
+      "id": "4458",
+      "userId": "1",
+      "items": [
+        {
+          "id": "10af",
+          "userId": "1",
+          "productId": "c827",
+          "name": "test",
+          "price": "400",
+          "image": "/products/health.jpg",
+          "quantity": 1,
+          "sellerId": "2"
+        },
+        {
+          "id": "a082",
+          "userId": "1",
+          "productId": "ed92",
+          "name": "test",
+          "price": "20",
+          "image": "/products/headphone.webp",
+          "quantity": 1,
+          "sellerId": "2"
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-20T07:50:41.396Z"
+    },
+    {
+      "id": "f7b9",
+      "userId": "1",
+      "items": [
+        {
+          "id": "c2e0",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 1,
+          "sellerId": null
+        },
+        {
+          "id": "3e62",
+          "userId": "1",
+          "productId": "c5e1",
+          "name": "T-shirt",
+          "price": "50",
+          "image": "/products/shirt.webp",
+          "quantity": 1,
+          "sellerId": null
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-20T08:00:23.656Z"
+    },
+    {
+      "id": "7d1f",
+      "userId": "1",
+      "items": [
+        {
+          "id": "17d9",
+          "userId": "1",
+          "productId": "1",
+          "name": "Laptop",
+          "price": 1000,
+          "image": "/products/Laptop.webp",
+          "quantity": 2,
+          "sellerId": null
+        },
+        {
+          "id": "f202",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 1,
+          "sellerId": null
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-20T09:02:35.247Z"
+    },
+    {
+      "id": "e686",
+      "userId": "1",
+      "items": [
+        {
+          "id": "f641",
+          "userId": "1",
+          "productId": "373d",
+          "name": "Watch",
+          "price": "1500",
+          "image": "/products/watch.jpg",
+          "quantity": 2,
+          "sellerId": null
+        }
+      ],
+      "status": "pending",
+      "createdAt": "2025-02-20T10:15:40.925Z"
     }
   ],
   "cart": []

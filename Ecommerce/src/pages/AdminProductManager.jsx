@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllProducts, createProduct, updateProduct, removeProduct } from "../redux/slices/adminProductSlice";
+import { useNavigate } from "react-router-dom";
 
 const AdminProductManager = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
     const { adminProducts } = useSelector((state) => state.adminProducts);
     const [newProduct, setNewProduct] = useState({ name: "", price: "", category: "", image: "" });
     const [editData, setEditData] = useState(null);
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
+        if (!storedUser || !["admin", "seller"].includes(storedUser.role)) {
+            navigate("/"); // Redirect to home page
+        }
         dispatch(fetchAllProducts());
     }, [dispatch]);
 
@@ -49,7 +56,7 @@ const AdminProductManager = () => {
                 <input type="text" className="form-control mb-2" placeholder="Category" value={newProduct.category}
                     onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })} />
 
-      
+
                 <input
                     type="file"
                     className="form-control mb-2"
@@ -111,14 +118,14 @@ const AdminProductManager = () => {
                                 <input type="text" className="form-control mb-2" value={editData.category}
                                     onChange={(e) => setEditData({ ...editData, category: e.target.value })} />
 
-                
+
                                 <input
                                     type="file"
                                     className="form-control mb-2"
                                     onChange={(e) => {
                                         const file = e.target.files[0];
                                         if (file) {
-                                            const imagePath = `/products/${file.name}`;  
+                                            const imagePath = `/products/${file.name}`;
                                             setEditData({ ...editData, image: imagePath });
                                         }
                                     }}
@@ -141,7 +148,7 @@ export default AdminProductManager;
 
 
 /* *************************** */
-console.log('dd')
+
 
 
 

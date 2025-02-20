@@ -44,3 +44,80 @@ const OrdersPage = () => {
 };
 
 export default OrdersPage;
+
+
+
+
+// import React, { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchOrders, approveOrder, rejectOrder } from "../redux/slices/orderSlice";
+// import { Table, Button, Spinner } from "react-bootstrap";
+
+// const OrdersPage = () => {
+//   const dispatch = useDispatch();
+//   const { orders, loading, error } = useSelector((state) => state.orders);
+//   const { user } = useSelector((state) => state.auth);
+
+//   useEffect(() => {
+//     dispatch(fetchOrders());
+//   }, [dispatch]);
+
+//   if (loading) return <Spinner animation="border" />;
+//   if (error) return <p className="text-danger">Error: {error}</p>;
+
+//   // Filter orders to show only those containing the seller's products
+//   const sellerOrders = orders.filter(order =>
+//     order.items.some(item => item.sellerId === user.id)
+//   );
+
+//   return (
+//     <div className="container mt-4">
+//       <h2>Orders Management</h2>
+//       {sellerOrders.length === 0 ? (
+//         <p>No orders for your products yet.</p>
+//       ) : (
+//         <Table striped bordered hover>
+//           <thead>
+//             <tr>
+//               <th>Order ID</th>
+//               <th>Products</th>
+//               <th>Total Price</th>
+//               <th>Status</th>
+//               <th>Actions</th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {sellerOrders.map((order) => (
+//               <tr key={order.id}>
+//                 <td>{order.id}</td>
+//                 <td>
+//                   {order.items.map((item) => (
+//                     <div key={item.id}>
+//                       {item.name} (x{item.quantity})
+//                     </div>
+//                   ))}
+//                 </td>
+//                 <td>${order.totalPrice}</td>
+//                 <td>{order.status}</td>
+//                 <td>
+//                   {order.status === "pending" && (
+//                     <>
+//                       <Button variant="success" onClick={() => dispatch(approveOrder(order.id))} className="me-2">
+//                         Approve
+//                       </Button>
+//                       <Button variant="danger" onClick={() => dispatch(rejectOrder(order.id))}>
+//                         Reject
+//                       </Button>
+//                     </>
+//                   )}
+//                 </td>
+//               </tr>
+//             ))}
+//           </tbody>
+//         </Table>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default OrdersPage;

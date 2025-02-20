@@ -11,7 +11,6 @@ import AdminPanel from "./pages/AdminPanel";
 import AdminProductManager from "./pages/AdminProductManager";
 
 
-
 const App = () => {
   return (
     <Router>
@@ -27,9 +26,36 @@ const App = () => {
         </Route>
 
         <Route path="/orders" element={<OrdersPage />} />
+
+        {/* <Route element={<ProtectedRoute allowedRoles={["seller", "admin"]} />}>
+          <Route path="/orders" element={<OrdersPage />} />
+        </Route> */}
+
+
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/admin/products" element={<AdminProductManager />} />
-        
+
+        {/* Admin Routes (Restricted to 'admin' or 'seller') */}
+        {/* <Route
+          path="/admin"
+          element={
+            <ProtectedRoute allowedRoles={["admin", "seller"]}>
+              <AdminPanel />
+            </ProtectedRoute>
+          }
+        /> */}
+
+        {/* <Route
+          path="/admin/products"
+          element={
+            <ProtectedRoute allowedRoles={["admin", "seller"]}>
+              <AdminProductManager />
+            </ProtectedRoute>
+          }
+        /> */}
+
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+
       </Routes>
     </Router>
   );

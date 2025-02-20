@@ -1,0 +1,95 @@
+project/
+│── Server/
+│   └── db.json                
+│
+└── Ecommerce/                 
+    │── public/
+    │   │── images/    
+    │── src/
+    │   │── components/        
+    │   │   ├── Cart.jsx
+    │   │   ├── Products.jsx
+    │   │   ├── Home.jsx
+    │   │   ├── Auth/
+    │   │       ├── AuthTest.jsx
+    |   |       ├── Login.jsx
+    │   │       └── Register.jsx
+    │   │
+    │   │── pages/            # Main Pages
+    │   │   ├── AdminPanel.jsx
+    │   │   ├── OrdersPage.jsx
+    │   │   ├── AdminProductManager.jsx
+    │   │
+    │   │── redux/            # Redux Store & Slices
+    │   │   ├── store.js
+    │   │   ├── slices/
+    │   │   │   ├── authSlice.js
+    │   │   │   ├── cartSlice.js
+    │   │   │   ├── productSlice.js
+    │   │   │   ├── orderSlice.js
+    │   │   │   ├── userSlice.js 
+    │   │   │   ├── adminProductSlice.js
+    │   │
+    │   │── routes/           # Routing
+    │   │   ├── ProtectedRoute.jsx
+    │   │
+    │   │── App.jsx           # Main Component
+    │   │── main.js          # Entry Point
+    │
+    ├── package.json
+    ├── README.md
+
+
+
+
+
+
+
+************************************************************************************
+******************************* D O N E ********************************************
+************************************************************************************
+
+1_"/register" (works well  and store at db)
+2_ "/login"  (works well and login with only users from db)
+3_ "/" (works well and display the home page)
+4_ "/products" (works well and display all products from db)
+        4.1_  Add to cart button at products card works well an ad products to cart 
+5_ "/cart" (works well and display products added to carts )
+        5.1 _ increment button works well and increase the product quantity
+        5.2 _ decrement button works well and decrease the product quantity
+        5.3 _ remove button works well and remove the product from cart
+        5.4_ checkout button works well and remove all products from cart and send them to orders page with state pending 
+6_"/admin" works well and display a table of all users 
+        6.1_ edit button works well and allow admin to update users
+        6.2_delete button works well and allow admin to delete user
+7_"/admin/products" works well and display a table of all products 
+        6.1_ edit button works well and allow admin to update products
+        6.2_delete button works well and allow admin to delete products
+        6.3_form to add new product works well 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+user cant disply his orders after replace the code of OrdersPage.jsx
+
+seller can display orders that set "sellerId" manualy to the db order items
+
+
+
+
+
+

@@ -71,14 +71,23 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, deleteUser, editUser } from "../redux/slices/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const AdminPanel = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const { users } = useSelector((state) => state.users);
   const [editData, setEditData] = useState(null); // Store selected user for editing
   const [showModal, setShowModal] = useState(false);
 
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+
+
   useEffect(() => {
+    if (!storedUser || !["admin"].includes(storedUser.role)) {
+      navigate("/"); // Redirect to home page
+    }
     dispatch(fetchUsers());
   }, [dispatch]);
 
@@ -97,6 +106,7 @@ const AdminPanel = () => {
   };
 
   return (
+
     <div className="container mt-5">
       <h2>Admin Panel - User Management</h2>
       <table className="table">
