@@ -68,6 +68,13 @@
       "password": "123",
       "role": "user",
       "name": "abdallah"
+    },
+    {
+      "id": "c631",
+      "email": "new10@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "name": "new user"
     }
   ],
   "products": [
@@ -532,7 +539,7 @@
       "name": "Watch",
       "price": "1500",
       "image": "/products/watch.jpg",
-      "quantity": 1
+      "quantity": 3
     },
     {
       "id": "9773",
@@ -550,7 +557,7 @@
       "name": "Laptop",
       "price": 1000,
       "image": "/products/Laptop.webp",
-      "quantity": 1
+      "quantity": 2
     },
     {
       "id": "210b",
@@ -560,6 +567,15 @@
       "price": "400",
       "image": "/products/health.jpg",
       "quantity": 1
+    },
+    {
+      "id": "d6c6",
+      "userId": "111",
+      "productId": "ed92",
+      "name": "test",
+      "price": "20",
+      "image": "/products/headphone.webp",
+      "quantity": 2
     }
   ]
 }

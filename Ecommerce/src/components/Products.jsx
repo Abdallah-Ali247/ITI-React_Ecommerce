@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../redux/slices/productSlice";
@@ -25,6 +24,7 @@ const Products = () => {
       return;
     }
     dispatch(addToCart({ product, userId: user.id }));
+    alert("Add Product to  card ?")
   };
 
 
@@ -87,9 +87,12 @@ const Products = () => {
                 <div className="card-body text-center">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">${product.price}</p>
-                  <button className="btn btn-primary w-100">Add to Cart</button>
+                  <button className="btn btn-primary w-100"onClick={() => handleAddToCart(product)}>
+                    Add to Cart</button>
                 </div>
               </div>
+
+              
             </Col>
           ))}
         </Row>
