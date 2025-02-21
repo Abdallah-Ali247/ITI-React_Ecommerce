@@ -92,7 +92,7 @@
       "id": "c5e1",
       "name": "T-shirt",
       "price": "50",
-      "category": "cloths",
+      "category": "Clothing",
       "image": "/products/shirt.webp",
       "sellerId": "2"
     },
@@ -100,21 +100,21 @@
       "id": "c827",
       "name": "test",
       "price": "400",
-      "category": "cat1",
-      "image": "/products/health.jpg"
+      "category": "Clothing",
+      "image": "/products/cloths.jpg"
     },
     {
       "id": "ed92",
       "name": "test",
       "price": "20",
-      "category": "cat1",
+      "category": "Books",
       "image": "/products/headphone.webp"
     },
     {
       "id": "c94d",
       "name": "sa",
       "price": "50",
-      "category": "20",
+      "category": "cat1",
       "image": "/products/cloths.jpg"
     }
   ],
