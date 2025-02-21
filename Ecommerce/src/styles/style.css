@@ -95,4 +95,24 @@ button {
 
 .categories-section .row .card{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5) !important;
+ }
+
+
+.products-con .row .card {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5) !important;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    overflow: hidden;
+}
+.products-con .row .card:hover{
+    opacity: 1;
+}
+
+.products-con .row .card img{
+    max-height: 300px;
+    transition: all 0.5s ease-in-out;
+}
+
+.products-con .row .card img:hover{
+    transform: scale(1.1);
 }

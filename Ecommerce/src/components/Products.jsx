@@ -69,8 +69,8 @@ const Products = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Products</h2>
+    <div className="container mt-5 text-center products-con">
+      <h2 className="m-5">Products</h2>
       <div className="row">
         {products.map((product) => (
           <div key={product.id} className="col-md-4">
