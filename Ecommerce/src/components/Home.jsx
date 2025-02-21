@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Hero from "./Hero";
+import Slider from "./Slider";
+import Categories from "./Categories";
+
 const Home = () => {
   return (
-    <div className="container mt-5">
-      <h1>Welcome to Our E-Commerce Store</h1>
-      <p>Browse our products and enjoy shopping!</p>
-      <Link to="/products" className="btn btn-primary">View Products</Link>
+    <div>
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Slider Section */}
+      <Slider />
+
+      {/* Categories Section */}
+      <Categories />
     </div>
   );
 };

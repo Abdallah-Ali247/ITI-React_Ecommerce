@@ -55,6 +55,19 @@
       "password": "123",
       "role": "user",
       "name": "test3"
+    },
+    {
+      "id": "6b4c",
+      "email": "now1@now1.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "d583",
+      "email": "abdallah@gmail.com",
+      "password": "123",
+      "role": "user",
+      "name": "abdallah"
     }
   ],
   "products": [
@@ -504,13 +517,13 @@
   ],
   "cart": [
     {
-      "id": "31c0",
-      "userId": "111",
-      "productId": "1",
-      "name": "Laptop",
-      "price": 1000,
-      "image": "/products/Laptop.webp",
-      "quantity": 1
+      "id": "7f44",
+      "userId": "d583",
+      "productId": "373d",
+      "name": "Watch",
+      "price": "1500",
+      "image": "/products/watch.jpg",
+      "quantity": 2
     }
   ]
 }

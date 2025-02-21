@@ -1,25 +1,30 @@
 /* src/styles.css */
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #333; /* Dark text */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    /* Dark text */
 }
 
 .container {
-  max-width: 1200px; /* Limit container width */
+    max-width: 1200px;
+    /* Limit container width */
 }
 
- 
+
 
 button {
-  border-radius: 5px; /* Rounded buttons */
+    border-radius: 5px;
+    /* Rounded buttons */
 }
 
 .table {
-  border: 1px solid #ddd; /* Table borders */
+    border: 1px solid #ddd;
+    /* Table borders */
 }
 
 .card {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Card shadow */
 }
 
 
@@ -29,50 +34,65 @@ button {
 .login-card {
     max-width: 400px;
     margin: auto;
-  }
-  
-  .login-card .card-title {
+}
+
+.login-card .card-title {
     font-size: 1.75rem;
     font-weight: bold;
-  }
-  
-  .login-card .form-control {
+}
+
+.login-card .form-control {
     border-radius: 8px;
-  }
-  
-  .login-card .btn-primary {
+}
+
+.login-card .btn-primary {
     border-radius: 8px;
     font-weight: bold;
-  }
-  
-  .login-card .text-primary:hover {
+}
+
+.login-card .text-primary:hover {
     text-decoration: underline;
-  }/* src/styles.css */
+}
+
+/* src/styles.css */
 
 /* Register Page */
 .register-card {
     max-width: 400px;
     margin: auto;
-  }
-  
-  .register-card .card-title {
+}
+
+.register-card .card-title {
     font-size: 1.75rem;
     font-weight: bold;
-  }
-  
-  .register-card .form-control {
+}
+
+.register-card .form-control {
     border-radius: 8px;
-  }
-  
-  .register-card .btn-primary {
+}
+
+.register-card .btn-primary {
     border-radius: 8px;
     font-weight: bold;
-  }
-  
-  .register-card .text-primary:hover {
+}
+
+.register-card .text-primary:hover {
     text-decoration: underline;
-  }
-  
-  .register-card .alert-danger {
+}
+
+.register-card .alert-danger {
     border-radius: 8px;
-  }
+}
+
+.hero-section {
+    background: url('/images/p5.jpg') no-repeat center center;
+    /* Replace with your image */
+    background-size: cover;
+    color: white;
+    height: 90vh;
+}
+
+
+.categories-section .row .card{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5) !important;
+}

@@ -5,7 +5,7 @@ import { TiSocialFacebookCircular, TiSocialTwitter, TiSocialInstagram } from "re
  
 const Footer = () => {
   return (
-    <footer className="bg-light text-dark py-4 mt-5">
+    <footer className="bg-light text-dark py-4 mt-5 mb-0">
       <Container>
         <Row>
           {/* Column 1: Links */}

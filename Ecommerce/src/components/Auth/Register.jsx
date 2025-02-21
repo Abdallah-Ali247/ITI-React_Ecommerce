@@ -38,6 +38,19 @@ const Register = () => {
 
             <Form onSubmit={handleSubmit}>
               {/* Email Input */}
+              <Form.Group controlId="formName" className="mb-3">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="name"
+                  placeholder="Enter Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
+
+              {/* Email Input */}
               <Form.Group controlId="formEmail" className="mb-3">
                 <Form.Label>Email Address</Form.Label>
                 <Form.Control
