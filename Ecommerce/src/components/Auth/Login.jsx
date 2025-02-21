@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginSuccess } from "../../redux/slices/authSlice";
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,21 +29,63 @@ const Login = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <div className="mb-3">
-          <label>Email</label>
-          <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div className="mb-3">
-          <label>Password</label>
-          <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <button type="submit" className="btn btn-primary">Login</button>
-      </form>
-    </div>
+    <Container className="mt-5">
+      <Row className="justify-content-center">
+        <Col md={6} lg={4}>
+          <Card className="p-4 shadow-sm login-card">
+            <Card.Title as="h2" className="text-center mb-4">
+              Login
+            </Card.Title>
+            <Form onSubmit={handleLogin}>
+              {/* Email Input */}
+              <Form.Group controlId="formEmail" className="mb-3">
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </Form.Group>
+
+              {/* Password Input */}
+              <Form.Group controlId="formPassword" className="mb-3">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Enter password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </Form.Group>
+
+              {/* Submit Button */}
+              <div className="d-grid gap-2">
+                <Button variant="primary" type="submit">
+                  Login
+                </Button>
+              </div>
+
+              {/* Register Link */}
+              <div className="text-center mt-3">
+                <p>
+                  Don't have an account?{" "}
+                  <a href="/register" className="text-primary">
+                    Register here
+                  </a>
+                </p>
+              </div>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+
   );
 };
 
 export default Login;
+
+

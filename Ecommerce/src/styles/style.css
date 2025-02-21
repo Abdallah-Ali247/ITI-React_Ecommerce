@@ -1,26 +1,78 @@
 /* src/styles.css */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text */
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Dark text */
+}
+
+.container {
+  max-width: 1200px; /* Limit container width */
+}
+
+ 
+
+button {
+  border-radius: 5px; /* Rounded buttons */
+}
+
+.table {
+  border: 1px solid #ddd; /* Table borders */
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+}
+
+
+/* src/styles.css */
+
+/* Login Page */
+.login-card {
+    max-width: 400px;
+    margin: auto;
   }
   
-  .container {
-    max-width: 1200px; /* Limit container width */
+  .login-card .card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
   }
   
-  h1, h2, h3 {
-    color: #007bff; /* Bootstrap primary blue */
+  .login-card .form-control {
+    border-radius: 8px;
   }
   
-  button {
-    border-radius: 5px; /* Rounded buttons */
+  .login-card .btn-primary {
+    border-radius: 8px;
+    font-weight: bold;
   }
   
-  .table {
-    border: 1px solid #ddd; /* Table borders */
+  .login-card .text-primary:hover {
+    text-decoration: underline;
+  }/* src/styles.css */
+
+/* Register Page */
+.register-card {
+    max-width: 400px;
+    margin: auto;
   }
   
-  .card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+  .register-card .card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+  
+  .register-card .form-control {
+    border-radius: 8px;
+  }
+  
+  .register-card .btn-primary {
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .register-card .text-primary:hover {
+    text-decoration: underline;
+  }
+  
+  .register-card .alert-danger {
+    border-radius: 8px;
   }

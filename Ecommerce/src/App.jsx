@@ -10,6 +10,7 @@ import OrdersPage from "./pages/OrdersPage";
 import AdminPanel from "./pages/AdminPanel";
 import AdminProductManager from "./pages/AdminProductManager";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 
@@ -24,43 +25,20 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
 
-        {/* Protected Route for Cart */}
         <Route element={<ProtectedRoute allowedRoles={["user", "seller", "admin"]} />}>
           <Route path="/cart" element={<Cart />} />
         </Route>
 
         <Route path="/orders" element={<OrdersPage />} />
 
-        {/* <Route element={<ProtectedRoute allowedRoles={["seller", "admin"]} />}>
-          <Route path="/orders" element={<OrdersPage />} />
-        </Route> */}
-
-
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/admin/products" element={<AdminProductManager />} />
 
-        {/* Admin Routes (Restricted to 'admin' or 'seller') */}
-        {/* <Route
-          path="/admin"
-          element={
-            <ProtectedRoute allowedRoles={["admin", "seller"]}>
-              <AdminPanel />
-            </ProtectedRoute>
-          }
-        /> */}
-
-        {/* <Route
-          path="/admin/products"
-          element={
-            <ProtectedRoute allowedRoles={["admin", "seller"]}>
-              <AdminProductManager />
-            </ProtectedRoute>
-          }
-        /> */}
 
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
 
       </Routes>
+      <Footer />
     </Router>
   );
 };

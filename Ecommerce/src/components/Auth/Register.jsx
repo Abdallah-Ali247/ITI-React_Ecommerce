@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../redux/slices/authSlice";
 import { useNavigate } from "react-router-dom";
+import { Container, Row, Col, Card, Form, Button, Alert } from "react-bootstrap";
+
 
 const Register = () => {
   const [formData, setFormData] = useState({ email: "", password: "", role: "user" });
@@ -19,15 +21,69 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-        <button type="submit" disabled={loading}>Register</button>
-      </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-    </div>
+    <Container className="mt-5">
+      <Row className="justify-content-center">
+        <Col md={6} lg={4}>
+          <Card className="p-4 shadow-sm">
+            <Card.Title as="h2" className="text-center mb-4">
+              Register
+            </Card.Title>
+
+            {/* Error Alert */}
+            {error && (
+              <Alert variant="danger" className="mb-3">
+                {error}
+              </Alert>
+            )}
+
+            <Form onSubmit={handleSubmit}>
+              {/* Email Input */}
+              <Form.Group controlId="formEmail" className="mb-3">
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  placeholder="Enter email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
+
+              {/* Password Input */}
+              <Form.Group controlId="formPassword" className="mb-3">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  placeholder="Enter password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
+
+              {/* Submit Button */}
+              <div className="d-grid gap-2">
+                <Button variant="primary" type="submit" disabled={loading}>
+                  {loading ? "Registering..." : "Register"}
+                </Button>
+              </div>
+
+              {/* Login Link */}
+              <div className="text-center mt-3">
+                <p>
+                  Already have an account?{" "}
+                  <a href="/login" className="text-primary">
+                    Login here
+                  </a>
+                </p>
+              </div>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
